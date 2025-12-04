@@ -4,7 +4,7 @@ Guilherme Brasil - 22309720
 Gabriel Rodrigues - 22310104
 
 ```
-# Projeto: API de Produtos e Categorias (.NET 9)
+# Projeto: API + DB + GUI em C#
 
 ## Objetivo
 
@@ -250,7 +250,7 @@ Categoria (1) ------ (N) Produtos
 
 ------------------------------------------------------------------------
 
-# 12. Guia Completo para Usuários Iniciantes
+# 12. Resumo dos passos
 
 1.  Instalar todos os requisitos\
 2.  Abrir o projeto no VS Code\
