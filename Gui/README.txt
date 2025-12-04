@@ -1,0 +1,1 @@
+Placeholder for WPF GUI. Create WPF project and call API endpoints.

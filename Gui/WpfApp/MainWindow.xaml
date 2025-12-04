@@ -1,0 +1,34 @@
+<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Produtos - GUI" Height="500" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10">
+            <Label Content="Filtro:" VerticalAlignment="Center"/>
+            <TextBox x:Name="FilterText" Width="200" Margin="5,0,5,0"/>
+            <Button Content="Filtrar" Click="OnFilter" Width="80"/>
+            <Button Content="Atualizar" Click="OnRefresh" Width="80" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <DataGrid x:Name="ProductsGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Nome" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Preço" Binding="{Binding Price}" Width="100"/>
+                <DataGridTextColumn Header="Categoria" Binding="{Binding CategoryName}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Novo" Click="OnNew" Width="80" Margin="0,0,5,0"/>
+            <Button Content="Editar" Click="OnEdit" Width="80" Margin="0,0,5,0"/>
+            <Button Content="Excluir" Click="OnDelete" Width="80"/>
+        </StackPanel>
+    </Grid>
+</Window>
